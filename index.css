@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 40 60% 98%;
+    --foreground: 160 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 15% 15%;
+
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 142 25% 94%;
+    --secondary-foreground: 160 15% 15%;
+
+    --muted: 142 15% 96%;
+    --muted-foreground: 160 8% 45%;
+
+    --accent: 25 85% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 142 15% 85%;
+    --input: 142 15% 90%;
+    --ring: 142 71% 45%;
+
+    /* ReWear Brand Colors */
+    --rewear-green: 142 71% 45%;
+    --rewear-green-light: 142 45% 85%;
+    --rewear-coral: 12 85% 65%;
+    --rewear-coral-light: 12 45% 92%;
+    --rewear-yellow: 45 90% 70%;
+    --rewear-yellow-light: 45 65% 90%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--rewear-green)), hsl(var(--rewear-coral)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--rewear-green-light)) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(var(--rewear-green) / 0.15);
+    --shadow-card: 0 8px 30px -8px hsl(var(--rewear-green) / 0.2);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 160 20% 8%;
+    --foreground: 142 25% 92%;
+
+    --card: 160 15% 12%;
+    --card-foreground: 142 25% 92%;
+
+    --popover: 160 15% 12%;
+    --popover-foreground: 142 25% 92%;
+
+    --primary: 142 65% 55%;
+    --primary-foreground: 160 20% 8%;
+
+    --secondary: 160 10% 20%;
+    --secondary-foreground: 142 25% 92%;
+
+    --muted: 160 8% 18%;
+    --muted-foreground: 142 15% 65%;
+
+    --accent: 25 75% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 8% 25%;
+    --input: 160 8% 25%;
+    --ring: 142 65% 55%;
+
+    /* ReWear Brand Colors - Dark Mode */
+    --rewear-green: 142 65% 55%;
+    --rewear-green-light: 142 25% 25%;
+    --rewear-coral: 12 75% 60%;
+    --rewear-coral-light: 12 25% 20%;
+    --rewear-yellow: 45 80% 65%;
+    --rewear-yellow-light: 45 35% 25%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
